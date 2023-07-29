@@ -22,19 +22,19 @@ const Header = () => {
             <Nav className="m-auto my-2 my-lg-0" navbarScroll>
               <Link
                 to="/ongoing"
-                className="text-decoration-none text-dark fw-bold"
+                className="text-decoration-none text-dark fw-bold tag"
               >
                 Ongoing
               </Link>
               <Link
                 to="/completed"
-                className="text-decoration-none text-dark fw-bold"
+                className="text-decoration-none text-dark fw-bold tag"
               >
                 Completed
               </Link>
               <Link
                 to="/all"
-                className="text-decoration-none text-dark fw-bold"
+                className="text-decoration-none text-dark fw-bold tag"
               >
                 All Goals
               </Link>
