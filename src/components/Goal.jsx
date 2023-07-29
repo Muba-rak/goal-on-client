@@ -1,6 +1,7 @@
 import React from "react";
 import Progress from "./Progress";
-import { GrEdit } from "react-icons/gr";
+import { RiDeleteBinLine } from "react-icons/ri";
+import { MdOutlineModeEditOutline } from "react-icons/md";
 
 const Goal = ({ tag, description, progress }) => {
   return (
@@ -12,10 +13,10 @@ const Goal = ({ tag, description, progress }) => {
         <div className="mt-2 mt-lg-0 d-flex gap-4">
           <button className="blue-bg  updatebtn">
             {" "}
-            <GrEdit style={{ color: "red" }} /> Update Progress{" "}
+            <MdOutlineModeEditOutline /> Update Progress{" "}
           </button>
           <button className=" border-none bg-transparent transparent delbtn">
-            Delete{" "}
+            <RiDeleteBinLine /> Delete{" "}
           </button>
         </div>
       </div>

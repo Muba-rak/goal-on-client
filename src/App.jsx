@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Homepage from "./pages/Homepage";
 import Ongoing from "./pages/Ongoing";
+import Complete from "./pages/Complete";
+import Create from "./pages/Create";
 
 function App() {
   return (
@@ -13,8 +15,8 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/all" element={<h1>All Goals</h1>} />
             <Route path="/ongoing" element={<Ongoing />} />
-            <Route path="/completed" element={<h1>completed</h1>} />
-            <Route path="/create" element={<h1>Create a goal</h1>} />
+            <Route path="/completed" element={<Complete />} />
+            <Route path="/create" element={<Create />} />
           </Routes>
         </Layout>
       </Router>

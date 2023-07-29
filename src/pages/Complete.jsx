@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import Goal from "../components/Goal";
 import goals from "../data/goals";
+import Completed from "../components/Completed";
 import { Link } from "react-router-dom";
 
-const Ongoing = () => {
+const Complete = () => {
   const [Goals, setGoals] = useState(goals);
-
   return (
     <div className="container mt-2">
       <div className="d-flex justify-content-between align-items-center">
@@ -19,11 +18,11 @@ const Ongoing = () => {
       </div>
       <div>
         {Goals.map((g) => {
-          return <Goal key={g.id} {...g} />;
+          return <Completed key={g.id} {...g} />;
         })}
       </div>
     </div>
   );
 };
 
-export default Ongoing;
+export default Complete;

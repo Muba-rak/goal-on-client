@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
 .tag{
     margin: 0px 10px;
     font-size: 20px;
+   color: red; 
 }
 .blue-text{
     color: #0585CD;
@@ -65,7 +67,26 @@
     width: 131.43px;
     height: 56px;
 }
-
+.main-form{
+    background-color: #0585CD29;
+    width: 100%;
+    border: 2px solid red;
+}
+.create-form{
+    width: 100%;
+}
+.create-form input, .create-form textarea{
+    border-radius: 5px;
+    border: 2px solid #0585CD;
+    outline: none;
+    padding-left: 3px;
+}
+.create-form input{
+    height: 50px;
+}
+.create-form textarea{
+    width: 100%;
+}
 @media(max-width: 320px){
     .parent-container {
             width: 240px;
@@ -91,9 +112,38 @@
         .parent {
             width: 368px;
         }
-                .updatebtn {
-                    width: 230px;
-                    height: 56px;
-                }
+        .updatebtn {
+            width: 230px;
+            height: 56px;
+        }
+
+         .main-form {
+             width: 606px;
+             height: 600px;
     
+    
+         }
+        .create-form input{
+            width: 329px;
+        }
+        .create-form textarea{
+            width: 506px;
+            height: 355px;
+        }
+}
+@media (min-width: 1200px) {
+.main-form {
+        width: 656px;
+        height: 600px;
+
+
+    }
+           .create-form input {
+               width: 329px;
+           }
+    
+           .create-form textarea {
+               width: 556px;
+               height: 355px;
+           }
 }

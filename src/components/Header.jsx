@@ -1,6 +1,5 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
@@ -10,7 +9,7 @@ import person from "../assets/person.png";
 const Header = () => {
   return (
     <div>
-      <Navbar expand="lg" className="bg-white border-bottom border-2">
+      <Navbar expand="lg" className="bg-white border-bottom border-2 head">
         <Container>
           <Navbar.Brand>
             <Link to="/">

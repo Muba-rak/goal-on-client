@@ -1,5 +1,7 @@
 import React from "react";
 import Progress from "./Progress";
+import { MdOutlineModeEditOutline } from "react-icons/md";
+import { RiDeleteBinLine } from "react-icons/ri";
 
 const Goal = ({ tag, description, progress, btntext }) => {
   return (
@@ -11,9 +13,13 @@ const Goal = ({ tag, description, progress, btntext }) => {
       <div className="d-block d-md-flex align-items-end justify-content-between">
         <Progress num={100} />
         <div className="mt-2 mt-lg-0 d-flex gap-4">
-          <button className="blue-bg p-2 editbtn">Edit </button>
+          <button className="blue-bg p-2 editbtn">
+            {" "}
+            <MdOutlineModeEditOutline />
+            Edit{" "}
+          </button>
           <button className="p-2 border-none bg-transparent transparent delbtn">
-            Delete{" "}
+            <RiDeleteBinLine /> Delete{" "}
           </button>
         </div>
       </div>
