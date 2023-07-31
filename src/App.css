@@ -95,6 +95,9 @@
         .parent {
             width: 240px;
         }
+        .create-link{
+            font-size: 12px;
+        }
 }
 @media (min-width: 900px) {
     .img-logo{
@@ -119,7 +122,7 @@
 
          .main-form {
              width: 500px;
-             height: 600px;
+             height: auto;
     
     
          }
@@ -137,7 +140,7 @@
 @media (min-width: 1200px) {
 .main-form {
         width: 656px;
-        height: 600px;
+        height: auto;
 
 
     }

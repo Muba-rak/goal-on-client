@@ -38,7 +38,7 @@ const Header = () => {
                 All Goals
               </Link>
             </Nav>
-            <div className="m-auto my-2 my-lg-0">
+            <div className="ms-auto my-2 my-lg-0">
               <img src={person} alt="" className="mx-2 my-2 my-lg-0 d-block" />
             </div>
           </Navbar.Collapse>

@@ -4,7 +4,7 @@ import step from "../assets/amico.png";
 const Create = () => {
   return (
     <div className="container d-flex justify-content-between align-items-center mt-3 pb-3 gap-lg-2">
-      <div className="main-form py-5 px-1 ps-lg-2 ps-xl-3 pe-xl-3">
+      <div className="main-form py-5 px-1 ps-lg-2 ps-xl-3 pe-xl-3 rounded-2">
         <form className="create-form">
           <div className="mt-2">
             <input

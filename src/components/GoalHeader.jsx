@@ -6,12 +6,19 @@ const GoalHeader = ({ heading }) => {
     <div>
       <div className="d-flex justify-content-between align-items-center mt-1">
         <h2 className="fw-bold">{heading}</h2>
-        <p className="blue-text">
-          <Link className="text-decoration-none blue-text fw-bold" to="/create">
-            {" "}
-            + Create new goals
-          </Link>
-        </p>
+        {heading === "Progress" ? (
+          ""
+        ) : (
+          <p className="blue-text">
+            <Link
+              className="text-decoration-none blue-text fw-bold create-link"
+              to="/create"
+            >
+              {" "}
+              + Create new goals
+            </Link>
+          </p>
+        )}
       </div>
     </div>
   );

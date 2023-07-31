@@ -6,6 +6,7 @@ import Ongoing from "./pages/Ongoing";
 import Complete from "./pages/Complete";
 import Create from "./pages/Create";
 import Allgoals from "./pages/Allgoals";
+import Update from "./pages/Update";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/ongoing" element={<Ongoing />} />
             <Route path="/completed" element={<Complete />} />
             <Route path="/create" element={<Create />} />
+            <Route path="/update/:id" element={<Update />} />
           </Routes>
         </Layout>
       </Router>
