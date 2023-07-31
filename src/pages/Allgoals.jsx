@@ -6,7 +6,7 @@ import Goal from "../components/Goal";
 const Allgoals = () => {
   const [Goals, setGoals] = useState(goals);
   return (
-    <div className="container">
+    <div className="container pb-3">
       <GoalHeader />
       <div>
         <div>

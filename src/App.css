@@ -70,7 +70,7 @@
 .main-form{
     background-color: #0585CD29;
     width: 100%;
-    border: 2px solid red;
+
 }
 .create-form{
     width: 100%;
@@ -118,16 +118,19 @@
         }
 
          .main-form {
-             width: 606px;
+             width: 500px;
              height: 600px;
     
     
+         }
+         .main-img img{
+            width: 480px;
          }
         .create-form input{
             width: 329px;
         }
         .create-form textarea{
-            width: 506px;
+            width: 420px;
             height: 355px;
         }
 }
@@ -138,12 +141,15 @@
 
 
     }
-           .create-form input {
-               width: 329px;
-           }
-    
-           .create-form textarea {
-               width: 556px;
-               height: 355px;
-           }
+    .main-img img {
+        width: 538px;
+    }
+    .create-form input {
+        width: 329px;
+    }
+
+    .create-form textarea {
+        width: 556px;
+        height: 355px;
+    }
 }

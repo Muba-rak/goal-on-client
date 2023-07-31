@@ -3,8 +3,8 @@ import step from "../assets/amico.png";
 
 const Create = () => {
   return (
-    <div className="container d-flex justify-content-between align-items-center mt-3 pb-3">
-      <div className="main-form py-5 px-1 ps-lg-5">
+    <div className="container d-flex justify-content-between align-items-center mt-3 pb-3 gap-lg-2">
+      <div className="main-form py-5 px-1 ps-lg-2 ps-xl-3 pe-xl-3">
         <form className="create-form">
           <div className="mt-2">
             <input
@@ -28,7 +28,7 @@ const Create = () => {
           </div>
         </form>
       </div>
-      <div className="d-none d-lg-block">
+      <div className="d-none d-lg-block main-img">
         <img src={step} alt="image of a step" />
       </div>
     </div>
