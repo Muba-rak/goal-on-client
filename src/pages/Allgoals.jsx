@@ -7,7 +7,7 @@ const Allgoals = () => {
   const [Goals, setGoals] = useState(goals);
   return (
     <div className="container pb-3">
-      <GoalHeader />
+      <GoalHeader heading="All Goals" />
       <div>
         <div>
           {Goals.map((g) => {

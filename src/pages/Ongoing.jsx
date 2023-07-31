@@ -8,7 +8,7 @@ const Ongoing = () => {
 
   return (
     <div className="container mt-2">
-      <GoalHeader />
+      <GoalHeader heading="Ongoing" />
       <div>
         {Goals.map((g) => {
           return <Goal key={g.id} {...g} />;

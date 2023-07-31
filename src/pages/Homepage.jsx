@@ -1,5 +1,6 @@
 import React from "react";
 import bro from "../assets/bro.png";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
@@ -22,9 +23,11 @@ const Homepage = () => {
           egestas inoriou pellentesque commodo amet. Facilisi sed ut nisi
           pellentesque diam egestas et turpis donor amet.
         </p>
-        <button className="blue-bg btn1 text-white p-2 d-block mt-2">
-          Manage Goals
-        </button>
+        <Link to="/all" className="text-decoration-none">
+          <button className="blue-bg btn1 text-white p-2 d-block mt-2">
+            Manage Goals
+          </button>
+        </Link>
       </div>
     </div>
   );

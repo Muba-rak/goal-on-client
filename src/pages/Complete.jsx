@@ -7,7 +7,7 @@ const Complete = () => {
   const [Goals, setGoals] = useState(goals);
   return (
     <div className="container mt-2">
-      <GoalHeader />
+      <GoalHeader heading="Completed" />
       <div>
         {Goals.map((g) => {
           return <Completed key={g.id} {...g} />;

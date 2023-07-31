@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const GoalHeader = () => {
+const GoalHeader = ({ heading }) => {
   return (
     <div>
-      <div className="d-flex justify-content-between align-items-center">
-        <h2 className="fw-bold">Ongoing</h2>
+      <div className="d-flex justify-content-between align-items-center mt-1">
+        <h2 className="fw-bold">{heading}</h2>
         <p className="blue-text">
           <Link className="text-decoration-none blue-text fw-bold" to="/create">
             {" "}
