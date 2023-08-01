@@ -1,12 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import Homepage from "./pages/Homepage";
-import Ongoing from "./pages/Ongoing";
-import Complete from "./pages/Complete";
-import Create from "./pages/Create";
-import Allgoals from "./pages/Allgoals";
-import Update from "./pages/Update";
+import {Homepage, Ongoing, Complete, Create, Allgoals, Update, Error} from './pages'
 
 function App() {
   return (
@@ -20,6 +15,9 @@ function App() {
             <Route path="/completed" element={<Complete />} />
             <Route path="/create" element={<Create />} />
             <Route path="/update/:id" element={<Update />} />
+            <Route path="*" element={<Error />} />
+
+
           </Routes>
         </Layout>
       </Router>

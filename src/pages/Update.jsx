@@ -29,7 +29,6 @@ const Update = () => {
             </div>
             <div>
               <p>Update Progress</p>
-              {/* <Progress num={20} /> */}
               <input type="number" className="bg-transparent mt-2" />
             </div>
             <div className="mt-2">
