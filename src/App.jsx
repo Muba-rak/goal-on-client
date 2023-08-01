@@ -16,8 +16,6 @@ function App() {
             <Route path="/create" element={<Create />} />
             <Route path="/update/:id" element={<Update />} />
             <Route path="*" element={<Error />} />
-
-
           </Routes>
         </Layout>
       </Router>

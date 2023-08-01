@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
-    <div className="container d-block d-lg-flex justify-content-lg-between align-items-lg-center gap-2 mt-5 pb-3">
+    <div className="container d-block d-lg-flex justify-content-lg-between align-items-lg-center gap-2 mt-5 pb-4">
       <div className="text-center">
         <img className="img-logo" src={bro} alt="main image" />
       </div>
@@ -23,11 +23,19 @@ const Homepage = () => {
           egestas inoriou pellentesque commodo amet. Facilisi sed ut nisi
           pellentesque diam egestas et turpis donor amet.
         </p>
-        <Link to="/all" className="text-decoration-none">
+        <div className="d-flex align-items-center gap-2">
+          <Link to="/all" className="text-decoration-none">
           <button className="blue-bg btn1 text-white p-2 d-block mt-2">
             Manage Goals
           </button>
         </Link>
+          <Link to="/create" className="text-decoration-none blue-text fw-bold">
+            <button className="blue-bg btn1 text-white p-2 d-block mt-2">
+
+          + New Goal
+            </button>
+        </Link>
+        </div>
       </div>
     </div>
   );
