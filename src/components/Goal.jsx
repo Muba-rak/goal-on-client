@@ -5,6 +5,21 @@ import { MdOutlineModeEditOutline } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Goal = ({ title, description, progress, _id }) => {
+  const handleDelete = async (id) => {
+    try {
+      const url = `http://localhost:8000/api/goals/${id}`;
+      const res = await fetch(url, {
+        method: "DELETE",
+      });
+      const data = await res.json();
+      if (data.success) {
+        window.location.reload();
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="border-bottom border-3 border-secondary-subtle pb-4 px-4 mt-4 shadow-sm">
       <h2 className="fw-bold text-capitalize">{title}</h2>
@@ -20,7 +35,10 @@ const Goal = ({ title, description, progress, _id }) => {
               <MdOutlineModeEditOutline /> Update Progress{" "}
             </Link>{" "}
           </button>
-          <button className=" border-none bg-transparent transparent delbtn">
+          <button
+            className=" border-none bg-transparent transparent delbtn"
+            onClick={() => handleDelete(_id)}
+          >
             <RiDeleteBinLine /> Delete{" "}
           </button>
         </div>

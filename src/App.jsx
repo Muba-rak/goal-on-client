@@ -1,7 +1,15 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import {Homepage, Ongoing, Complete, Create, Allgoals, Update, Error} from './pages'
+import {
+  Homepage,
+  Ongoing,
+  Complete,
+  Create,
+  Allgoals,
+  Update,
+  Error,
+} from "./pages";
 
 function App() {
   return (
@@ -14,7 +22,7 @@ function App() {
             <Route path="/ongoing" element={<Ongoing />} />
             <Route path="/completed" element={<Complete />} />
             <Route path="/create" element={<Create />} />
-            <Route path="/update/:id" element={<Update />} />
+            <Route path="/update/:goalId" element={<Update />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </Layout>
