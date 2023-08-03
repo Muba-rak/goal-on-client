@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Goal = ({ title, description, _id }) => {
   const handleDelete = async (id) => {
     try {
-      const url = `http://localhost:8000/api/goals/${id}`;
+      const url = `https://goalonapi.onrender.com/api/goals/${id}`;
       const res = await fetch(url, {
         method: "DELETE",
       });

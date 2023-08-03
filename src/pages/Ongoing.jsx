@@ -25,8 +25,8 @@ const Ongoing = () => {
   const {
     isLoading,
     data: { goals },
-  } = useFetch("http://localhost:8000/api/goals");
-  const Goals = isLoading ? "" : goals.filter((g) => g.progress < 100);
+  } = useFetch("https://goalonapi.onrender.com/api/goals");
+  const Goals = isLoading ? [] : goals.filter((g) => g.progress < 100);
 
   return (
     <div className="container mt-2">

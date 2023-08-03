@@ -15,7 +15,7 @@ const Update = () => {
   const redirect = useNavigate();
 
   const { goalId } = useParams();
-  const url = `http://localhost:8000/api/goals/${goalId}`;
+  const url = `https://goalonapi.onrender.com/api/goals/${goalId}`;
   const getGoal = async () => {
     const res = await fetch(url);
     const { goal } = await res.json();

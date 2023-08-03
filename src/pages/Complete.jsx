@@ -6,27 +6,11 @@ import Loading from "../components/Loading";
 import { useFetch } from "../Hooks/useFetch";
 
 const Complete = () => {
-  // const [Goals, setGoals] = useState([]);
-  // const [isLoading, setIsLoading] = useState(true);
-  // const getGoals = async () => {
-  //   try {
-  //     const res = await fetch("http://localhost:8000/api/goals");
-  //     const data = await res.json();
-  //     setIsLoading(false);
-  //     const completeGoals = data.goals.filter((g) => g.progress === 100);
-  //     setGoals(completeGoals);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-  // useEffect(() => {
-  //   getGoals();
-  // }, []);
   const {
     isLoading,
     data: { goals },
-  } = useFetch("http://localhost:8000/api/goals");
-  const Goals = isLoading ? "" : goals.filter((g) => g.progress === 100);
+  } = useFetch("https://goalonapi.onrender.com/api/goals");
+  const Goals = isLoading ? [] : goals.filter((g) => g.progress === 100);
 
   return (
     <div className="container mt-2">

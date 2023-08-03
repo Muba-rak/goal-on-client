@@ -3,7 +3,6 @@ import step from "../assets/amico.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
-import { useFetch } from "../Hooks/useFetch";
 
 const Create = () => {
   const redirect = useNavigate();
@@ -12,7 +11,7 @@ const Create = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:8000/api/goals", {
+      const res = await fetch("https://goalonapi.onrender.com/api/goals", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, description }),
