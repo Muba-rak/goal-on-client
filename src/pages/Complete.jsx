@@ -4,6 +4,7 @@ import Completed from "../components/Completed";
 import GoalHeader from "../components/GoalHeader";
 import Loading from "../components/Loading";
 import { useFetch } from "../Hooks/useFetch";
+import Empty from "../components/Empty";
 
 const Complete = () => {
   const {
@@ -16,11 +17,15 @@ const Complete = () => {
     <div className="container mt-2">
       <GoalHeader heading="Completed" />
       {isLoading && <Loading />}
+      {/* <div>{<Empty />}</div> */}
       <div>
-        {Goals &&
+        {Goals && Goals.length < 1 ? (
+          <Empty />
+        ) : (
           Goals.map((g) => {
             return <Completed key={g._id} {...g} />;
-          })}
+          })
+        )}
       </div>
     </div>
   );

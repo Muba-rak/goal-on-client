@@ -4,6 +4,7 @@ import goals from "../data/goals";
 import GoalHeader from "../components/GoalHeader";
 import Loading from "../components/Loading";
 import { useFetch } from "../Hooks/useFetch";
+import Empty from "../components/Empty";
 
 const Ongoing = () => {
   // const [Goals, setGoals] = useState([]);
@@ -33,10 +34,13 @@ const Ongoing = () => {
       <GoalHeader heading="Ongoing" />
       {isLoading && <Loading />}
       <div>
-        {Goals &&
+        {Goals && Goals.length < 1 ? (
+          <Empty />
+        ) : (
           Goals.map((g) => {
             return <Goal key={g._id} {...g} />;
-          })}
+          })
+        )}
       </div>
     </div>
   );

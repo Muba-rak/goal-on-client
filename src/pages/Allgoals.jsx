@@ -4,6 +4,7 @@ import GoalHeader from "../components/GoalHeader";
 import Goal from "../components/Goal";
 import Loading from "../components/Loading";
 import { useFetch } from "../Hooks/useFetch";
+import Empty from "../components/Empty";
 const Allgoals = () => {
   const {
     isLoading,
@@ -16,10 +17,13 @@ const Allgoals = () => {
       {isLoading && <Loading />}
       <div>
         <div>
-          {Goals &&
+          {Goals && Goals.length < 1 ? (
+            <Empty />
+          ) : (
             Goals.map((g) => {
               return <Goal key={g._id} {...g} />;
-            })}
+            })
+          )}
         </div>
       </div>
     </div>
