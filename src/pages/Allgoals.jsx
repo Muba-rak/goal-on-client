@@ -17,13 +17,10 @@ const Allgoals = () => {
       {isLoading && <Loading />}
       <div>
         <div>
-          {Goals && Goals.length < 1 ? (
-            <Empty />
-          ) : (
+          {Goals &&
             Goals.map((g) => {
               return <Goal key={g._id} {...g} />;
-            })
-          )}
+            })}
         </div>
       </div>
     </div>
