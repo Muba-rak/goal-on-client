@@ -1,10 +1,16 @@
 import React from "react";
 import bro from "../assets/bro.png";
 import { Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 
 const Homepage = () => {
+  const notify = () => {
+    toast.success("You are signed in, Welcome to Goal On.");
+  };
+  notify();
   return (
     <div className="container d-block d-lg-flex justify-content-lg-between align-items-lg-center gap-2 mt-5 pb-4">
+      <Toaster></Toaster>
       <div className="text-center">
         <img className="img-logo" src={bro} alt="main image" />
       </div>
@@ -25,16 +31,15 @@ const Homepage = () => {
         </p>
         <div className="d-flex align-items-center gap-2">
           <Link to="/all" className="text-decoration-none">
-          <button className="blue-bg btn1 text-white p-2 d-block mt-2">
-            Manage Goals
-          </button>
-        </Link>
+            <button className="blue-bg btn1 text-white p-2 d-block mt-2">
+              Manage Goals
+            </button>
+          </Link>
           <Link to="/create" className="text-decoration-none blue-text fw-bold">
             <button className="blue-bg btn1 text-white p-2 d-block mt-2">
-
-          + New Goal
+              + New Goal
             </button>
-        </Link>
+          </Link>
         </div>
       </div>
     </div>

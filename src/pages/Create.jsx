@@ -10,6 +10,7 @@ const Create = () => {
   const [description, setDescription] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
+    toast.update("creating Goals");
     try {
       const res = await fetch("https://goalonapi.onrender.com/api/goals", {
         method: "POST",
