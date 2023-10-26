@@ -11,6 +11,9 @@ const Allgoals = () => {
     data: { goals: Goals },
   } = useFetch("https://goalonapi.onrender.com/api/goals");
 
+  if (!isLoading && Goals.length < 1) {
+    return <Empty />;
+  }
   return (
     <div className="container pb-3">
       <GoalHeader heading="All Goals" />

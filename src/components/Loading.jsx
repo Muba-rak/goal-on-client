@@ -3,9 +3,12 @@ import { RotatingLines } from "react-loader-spinner";
 
 const Loading = () => {
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100">
+    <div
+      className="d-flex justify-content-center align-items-center "
+      style={{ height: `calc(100vh - 165px)` }}
+    >
       <RotatingLines
-        strokeColor="grey"
+        strokeColor="#0585CD"
         strokeWidth="5"
         animationDuration="0.75"
         width="200"
