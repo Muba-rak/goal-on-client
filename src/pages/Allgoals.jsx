@@ -1,15 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import GoalHeader from "../components/GoalHeader";
 
 import Goal from "../components/Goal";
 import Loading from "../components/Loading";
 import { useFetch } from "../Hooks/useFetch";
 import Empty from "../components/Empty";
+import ErrorFetch from "../components/ErrorFetch";
+
 const Allgoals = () => {
   const {
     isLoading,
     data: { goals: Goals },
+    isError,
   } = useFetch("https://goalonapi.onrender.com/api/goals");
+
+  if (!isLoading && isError) {
+    return <ErrorFetch />;
+  }
 
   if (!isLoading && Goals.length < 1) {
     return <Empty />;
