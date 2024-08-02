@@ -2,9 +2,10 @@ import React from "react";
 import Progress from "./Progress";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { MdOutlineModeEditOutline } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
-const Goal = ({ title, description, progress, _id }) => {
+const SingleGoal = ({ title, description, progress, _id }) => {
+  const path = useLocation().pathname;
   const handleDelete = async (id) => {
     try {
       const url = `https://goalonapi.onrender.com/api/goals/${id}`;
@@ -22,6 +23,9 @@ const Goal = ({ title, description, progress, _id }) => {
 
   return (
     <div className="border-bottom border-3 border-secondary-subtle pb-4 px-4 mt-4 shadow-sm">
+      {path === "/completed" && (
+        <p className="text-secondary fw-light"> {`Congratulations 🎉`} </p>
+      )}
       <h2 className="fw-bold text-capitalize">{title}</h2>
       <p>{description} </p>
       <div className="d-block d-md-flex align-items-end justify-content-between">
@@ -32,8 +36,9 @@ const Goal = ({ title, description, progress, _id }) => {
               to={`/update/${_id}`}
               className="text-decoration-none text-white"
             >
-              <MdOutlineModeEditOutline /> Update Progress{" "}
-            </Link>{" "}
+              <MdOutlineModeEditOutline />
+              {path === "/completed" ? "Edit" : "Update Progress"}
+            </Link>
           </button>
           <button
             className=" border-none bg-transparent transparent delbtn"
@@ -47,4 +52,4 @@ const Goal = ({ title, description, progress, _id }) => {
   );
 };
 
-export default Goal;
+export default SingleGoal;

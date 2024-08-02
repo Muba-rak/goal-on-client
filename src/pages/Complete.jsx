@@ -1,4 +1,4 @@
-import Completed from "../components/Completed";
+import SingleGoal from "../components/SingleGoal";
 import GoalHeader from "../components/GoalHeader";
 import Loading from "../components/Loading";
 import { useFetch } from "../Hooks/useFetch";
@@ -29,7 +29,7 @@ const Complete = () => {
       <div>
         {Goals &&
           Goals.map((g) => {
-            return <Completed key={g._id} {...g} />;
+            return <SingleGoal key={g._id} {...g} />;
           })}
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import GoalHeader from "../components/GoalHeader";
 
-import Goal from "../components/Goal";
+import SingleGoal from "../components/SingleGoal";
 import Loading from "../components/Loading";
 import { useFetch } from "../Hooks/useFetch";
 import Empty from "../components/Empty";
@@ -29,7 +29,7 @@ const Allgoals = () => {
         <div>
           {Goals &&
             Goals.map((g) => {
-              return <Goal key={g._id} {...g} />;
+              return <SingleGoal key={g._id} {...g} />;
             })}
         </div>
       </div>
